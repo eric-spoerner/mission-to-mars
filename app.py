@@ -41,8 +41,6 @@ def index():
             mars = mars_collection.find_one()
             # https://pyquestions.com/object-is-not-json-serializable
             print(mars)
-            # json_doc = json.dumps(mars, default=json_util.default)
-
             return render_template("index.html", mars=mars)
         except OperationFailure as e:
             return e
